@@ -1,6 +1,6 @@
 MERCADO NUBE | PIPELINE INTEGRADO
-Fecha UTC: 2026-09-16T20:19:41.920105+00:00
-SHA256 fuentes: 93381871a3fc15a8bfb771d3a48abe2e598b236be08ab2a944ed0284b843bfd6
+Fecha UTC: 2026-09-16T20:25:45.678329+00:00
+SHA256 fuentes: 57123fe7231ee425d154d0fa9696f0688ed4c6deaa1748ea412d290a55c3a7de
 Herramienta bandit: 1.9.4
 Herramienta checkov: 3.3.17
 Herramienta pip-audit: 2.10.1
@@ -986,7 +986,7 @@ RESULTADO ETAPA: PASS
 
 ETAPA tests | Umbral: Cero pruebas fallidas; todas las pruebas deben ejecutarse
 ...............                                                          [100%]
-15 passed in 6.81s
+15 passed in 6.41s
 RESULTADO ETAPA: PASS
 
 ETAPA sbom | Umbral: CycloneDX válido con componentes de ejecución

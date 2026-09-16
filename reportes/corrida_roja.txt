@@ -1,6 +1,6 @@
 MERCADO NUBE | PIPELINE INTEGRADO
-Fecha UTC: 2026-09-16T20:19:20.901912+00:00
-SHA256 fuentes: c7e3684a749c6ecb2f7e49539bdd85644d826e99abf63cd99f902cd388c83356
+Fecha UTC: 2026-09-16T20:25:29.755962+00:00
+SHA256 fuentes: f96737d7c54c0cd68983148d04fb9534ac7204dd76706ee6210af8fdc3b41f62
 Herramienta bandit: 1.9.4
 Herramienta checkov: 3.3.17
 Herramienta pip-audit: 2.10.1
@@ -20,7 +20,7 @@ ETAPA bandit | Umbral: Cero MEDIUM/HIGH; LOW se registra
 [main]	INFO	profile exclude tests: None
 [main]	INFO	cli include tests: None
 [main]	INFO	cli exclude tests: None
-[json]	INFO	JSON output written to file: C:\Users\multi\AppData\Local\Temp\mercado-nube-red-d07rimjf\reportes\roja\bandit.json
+[json]	INFO	JSON output written to file: C:\Users\multi\AppData\Local\Temp\mercado-nube-red-aq72zzck\reportes\roja\bandit.json
 [
   {
     "code": "1 \"\"\"Candidato de demostración: no desplegar.\"\"\"\n2 import subprocess\n3 \n",
@@ -82,7 +82,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\compute.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\compute.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\compute.tf",
                 "repo_file_path": "/infra/terraform/compute.tf",
                 "file_line_range": [
                     1,
@@ -111,7 +111,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\compute.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\compute.tf"
             },
             {
                 "check_id": "CKV_AWS_16",
@@ -125,7 +125,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\database.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\database.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\database.tf",
                 "repo_file_path": "/infra/terraform/database.tf",
                 "file_line_range": [
                     19,
@@ -154,7 +154,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\database.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\database.tf"
             },
             {
                 "check_id": "CKV_AWS_17",
@@ -168,7 +168,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\database.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\database.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\database.tf",
                 "repo_file_path": "/infra/terraform/database.tf",
                 "file_line_range": [
                     19,
@@ -197,7 +197,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\database.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\database.tf"
             },
             {
                 "check_id": "CKV_AWS_23",
@@ -211,7 +211,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     1,
@@ -240,7 +240,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_24",
@@ -257,7 +257,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     1,
@@ -286,7 +286,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_25",
@@ -303,7 +303,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     1,
@@ -332,7 +332,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_23",
@@ -346,7 +346,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     11,
@@ -373,7 +373,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_24",
@@ -390,7 +390,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     11,
@@ -417,7 +417,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_25",
@@ -434,7 +434,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     11,
@@ -461,7 +461,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_23",
@@ -475,7 +475,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     20,
@@ -502,7 +502,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_24",
@@ -519,7 +519,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     20,
@@ -546,7 +546,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_25",
@@ -563,7 +563,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     20,
@@ -590,7 +590,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_23",
@@ -604,7 +604,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     29,
@@ -631,7 +631,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_23",
@@ -645,7 +645,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     36,
@@ -674,7 +674,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_24",
@@ -691,7 +691,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     36,
@@ -720,7 +720,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_25",
@@ -737,7 +737,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     36,
@@ -766,7 +766,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_23",
@@ -780,7 +780,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     46,
@@ -807,7 +807,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_24",
@@ -824,7 +824,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     46,
@@ -851,7 +851,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_25",
@@ -868,7 +868,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     46,
@@ -895,7 +895,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_23",
@@ -909,7 +909,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\security.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf",
                 "repo_file_path": "/infra/terraform/security.tf",
                 "file_line_range": [
                     55,
@@ -936,7 +936,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\security.tf"
             },
             {
                 "check_id": "CKV_AWS_41",
@@ -948,7 +948,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 },
                 "code_block": null,
                 "file_path": "\\terraform\\versions.tf",
-                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\versions.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\versions.tf",
                 "repo_file_path": "/infra/terraform/versions.tf",
                 "file_line_range": [
                     16,
@@ -975,7 +975,7 @@ ETAPA checkov | Umbral: Cero fallos en los siete controles seleccionados; cero e
                 "guideline": null,
                 "details": [],
                 "check_len": null,
-                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\versions.tf"
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-aq72zzck\\infra\\terraform\\versions.tf"
             }
         ],
         "failed_checks": [],
@@ -1027,7 +1027,7 @@ RESULTADO ETAPA: PASS
 
 ETAPA tests | Umbral: Cero pruebas fallidas; todas las pruebas deben ejecutarse
 ...............                                                          [100%]
-15 passed in 6.92s
+15 passed in 6.10s
 RESULTADO ETAPA: PASS
 
 ETAPA sbom | Umbral: CycloneDX válido con componentes de ejecución

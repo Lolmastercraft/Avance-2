@@ -1,6 +1,6 @@
 {
   "verdict": "BLOQUEAR",
-  "source_sha256": "c7e3684a749c6ecb2f7e49539bdd85644d826e99abf63cd99f902cd388c83356",
+  "source_sha256": "f96737d7c54c0cd68983148d04fb9534ac7204dd76706ee6210af8fdc3b41f62",
   "deployment_sha256": "1998834519703a28337aa504c93507fb9f552b4a7343a76fe71ae9bd41c7354a",
   "stages": {
     "secrets": {
@@ -44,5 +44,5 @@
       "threshold": "HTTP 200; API, RDS y S3 sanos; certificado TLS verificado"
     }
   },
-  "utc": "2026-09-16T20:19:41.584307+00:00"
+  "utc": "2026-09-16T20:25:45.359483+00:00"
 }

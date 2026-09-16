@@ -1,6 +1,6 @@
 {
   "verdict": "PERMITIR",
-  "source_sha256": "93381871a3fc15a8bfb771d3a48abe2e598b236be08ab2a944ed0284b843bfd6",
+  "source_sha256": "57123fe7231ee425d154d0fa9696f0688ed4c6deaa1748ea412d290a55c3a7de",
   "deployment_sha256": "027be102395f93c906953e1370e6374494458fce10d5cb477eaad82962e032e7",
   "stages": {
     "secrets": {
@@ -44,5 +44,5 @@
       "threshold": "HTTP 200; API, RDS y S3 sanos; certificado TLS verificado"
     }
   },
-  "utc": "2026-09-16T20:19:59.526622+00:00"
+  "utc": "2026-09-16T20:26:01.668492+00:00"
 }
