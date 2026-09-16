@@ -1,0 +1,330 @@
+{
+  "utc": "2026-09-16T20:05:43.141300+00:00",
+  "region": "us-east-1",
+  "instance": {
+    "InstanceId": "i-06f5d7a26aa4f1498",
+    "InstanceType": "t3.micro",
+    "VpcId": "vpc-09bf9d8984b710e22",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "PublicIpAddress": "100.24.2.141",
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "required",
+      "HttpPutResponseHopLimit": 2,
+      "HttpEndpoint": "enabled",
+      "HttpProtocolIpv6": "disabled",
+      "InstanceMetadataTags": "enabled"
+    },
+    "SecurityGroups": [
+      {
+        "GroupId": "sg-0af6d643150ccabd5",
+        "GroupName": "avance2-marketplace-app-sg"
+      }
+    ]
+  },
+  "rds": {
+    "DBInstanceIdentifier": "avance2-marketplace-postgres",
+    "EngineVersion": "16.14",
+    "DBInstanceStatus": "available",
+    "StorageEncrypted": true,
+    "PubliclyAccessible": false,
+    "Endpoint": {
+      "Address": "avance2-marketplace-postgres.cmsubt4q9m7q.us-east-1.rds.amazonaws.com",
+      "Port": 5432,
+      "HostedZoneId": "Z2R2ITUGPM61AM"
+    },
+    "VpcSecurityGroups": [
+      {
+        "VpcSecurityGroupId": "sg-0297ffca43c148305",
+        "Status": "active"
+      }
+    ],
+    "DBSubnetGroup": {
+      "DBSubnetGroupName": "avance2-marketplace-db-subnets",
+      "DBSubnetGroupDescription": "Managed by Terraform",
+      "VpcId": "vpc-09bf9d8984b710e22",
+      "SubnetGroupStatus": "Complete",
+      "Subnets": [
+        {
+          "SubnetIdentifier": "subnet-0513e741418ed7d9f",
+          "SubnetAvailabilityZone": {
+            "Name": "us-east-1b"
+          },
+          "SubnetOutpost": {},
+          "SubnetStatus": "Active"
+        },
+        {
+          "SubnetIdentifier": "subnet-07cef790189eec587",
+          "SubnetAvailabilityZone": {
+            "Name": "us-east-1a"
+          },
+          "SubnetOutpost": {},
+          "SubnetStatus": "Active"
+        }
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "name": "avance2-marketplace-products-468504542046",
+      "public_access": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      },
+      "encryption": {
+        "Rules": [
+          {
+            "ApplyServerSideEncryptionByDefault": {
+              "SSEAlgorithm": "AES256"
+            },
+            "BucketKeyEnabled": false,
+            "BlockedEncryptionTypes": {
+              "EncryptionType": [
+                "SSE-C"
+              ]
+            }
+          }
+        ]
+      },
+      "versioning": "Enabled",
+      "policy": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "DenyInsecureTransport",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+              "arn:aws:s3:::avance2-marketplace-products-468504542046",
+              "arn:aws:s3:::avance2-marketplace-products-468504542046/*"
+            ],
+            "Condition": {
+              "Bool": {
+                "aws:SecureTransport": "false"
+              }
+            }
+          }
+        ]
+      },
+      "product_objects": [
+        {
+          "Key": "products/20fe8064931443429b5cf292e6e7496c.jpg",
+          "Size": 8740
+        },
+        {
+          "Key": "products/seed/bag.svg",
+          "Size": 625
+        },
+        {
+          "Key": "products/seed/camera.svg",
+          "Size": 764
+        },
+        {
+          "Key": "products/seed/headphones.svg",
+          "Size": 667
+        },
+        {
+          "Key": "products/seed/keyboard.svg",
+          "Size": 2646
+        },
+        {
+          "Key": "products/seed/lamp.svg",
+          "Size": 501
+        },
+        {
+          "Key": "products/seed/mug.svg",
+          "Size": 560
+        }
+      ]
+    },
+    {
+      "name": "avance2-marketplace-evidence-468504542046",
+      "public_access": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      },
+      "encryption": {
+        "Rules": [
+          {
+            "ApplyServerSideEncryptionByDefault": {
+              "SSEAlgorithm": "AES256"
+            },
+            "BucketKeyEnabled": false,
+            "BlockedEncryptionTypes": {
+              "EncryptionType": [
+                "SSE-C"
+              ]
+            }
+          }
+        ]
+      },
+      "versioning": "Enabled",
+      "policy": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "DenyInsecureTransport",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+              "arn:aws:s3:::avance2-marketplace-evidence-468504542046",
+              "arn:aws:s3:::avance2-marketplace-evidence-468504542046/*"
+            ],
+            "Condition": {
+              "Bool": {
+                "aws:SecureTransport": "false"
+              }
+            }
+          }
+        ]
+      },
+      "product_objects": []
+    }
+  ],
+  "security_groups": [
+    {
+      "GroupId": "sg-0af6d643150ccabd5",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "Required outbound access for updates, S3, RDS and SSM",
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "Avance 2 Marketplace"
+        },
+        {
+          "Key": "Environment",
+          "Value": "LearnerLab"
+        },
+        {
+          "Key": "Name",
+          "Value": "avance2-marketplace-app-sg"
+        },
+        {
+          "Key": "Owner",
+          "Value": "student"
+        },
+        {
+          "Key": "ManagedBy",
+          "Value": "Terraform"
+        }
+      ],
+      "VpcId": "vpc-09bf9d8984b710e22",
+      "SecurityGroupArn": "arn:aws:ec2:us-east-1:468504542046:security-group/sg-0af6d643150ccabd5",
+      "OwnerId": "468504542046",
+      "GroupName": "avance2-marketplace-app-sg",
+      "Description": "Public HTTP access for the marketplace application",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 80,
+          "ToPort": 80,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "Marketplace HTTP",
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        },
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 443,
+          "ToPort": 443,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "Marketplace HTTPS",
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-0297ffca43c148305",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "RDS managed outbound traffic",
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "Terraform"
+        },
+        {
+          "Key": "Environment",
+          "Value": "LearnerLab"
+        },
+        {
+          "Key": "Project",
+          "Value": "Avance 2 Marketplace"
+        },
+        {
+          "Key": "Name",
+          "Value": "avance2-marketplace-db-sg"
+        },
+        {
+          "Key": "Owner",
+          "Value": "student"
+        }
+      ],
+      "VpcId": "vpc-09bf9d8984b710e22",
+      "SecurityGroupArn": "arn:aws:ec2:us-east-1:468504542046:security-group/sg-0297ffca43c148305",
+      "OwnerId": "468504542046",
+      "GroupName": "avance2-marketplace-db-sg",
+      "Description": "PostgreSQL accessible only from the marketplace EC2 security group",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 5432,
+          "ToPort": 5432,
+          "UserIdGroupPairs": [
+            {
+              "Description": "PostgreSQL from application instances only",
+              "UserId": "468504542046",
+              "GroupId": "sg-0af6d643150ccabd5"
+            }
+          ],
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    }
+  ]
+}

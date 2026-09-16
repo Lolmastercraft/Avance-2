@@ -1,0 +1,926 @@
+{
+    "check_type": "terraform",
+    "results": {
+        "passed_checks": [
+            {
+                "check_id": "CKV_AWS_79",
+                "bc_check_id": null,
+                "check_name": "Ensure Instance Metadata Service Version 1 is not enabled",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "metadata_options/[0]/http_tokens"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\compute.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\compute.tf",
+                "repo_file_path": "/infra/terraform/compute.tf",
+                "file_line_range": [
+                    1,
+                    35
+                ],
+                "resource": "module.marketplace.aws_instance.marketplace",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.IMDSv1Disabled",
+                "fixed_definition": null,
+                "entity_tags": {
+                    "Name": "${lower(avance2-marketplace)}-app"
+                },
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\compute.tf"
+            },
+            {
+                "check_id": "CKV_AWS_16",
+                "bc_check_id": null,
+                "check_name": "Ensure all data stored in the RDS is securely encrypted at rest",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "storage_encrypted"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\database.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\database.tf",
+                "repo_file_path": "/infra/terraform/database.tf",
+                "file_line_range": [
+                    19,
+                    54
+                ],
+                "resource": "module.marketplace.aws_db_instance.marketplace",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.RDSEncryption",
+                "fixed_definition": null,
+                "entity_tags": {
+                    "Name": "${lower(avance2-marketplace)}-postgres"
+                },
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\database.tf"
+            },
+            {
+                "check_id": "CKV_AWS_17",
+                "bc_check_id": null,
+                "check_name": "Ensure all data stored in RDS is not publicly accessible",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "publicly_accessible"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\database.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\database.tf",
+                "repo_file_path": "/infra/terraform/database.tf",
+                "file_line_range": [
+                    19,
+                    54
+                ],
+                "resource": "module.marketplace.aws_db_instance.marketplace",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.RDSPubliclyAccessible",
+                "fixed_definition": null,
+                "entity_tags": {
+                    "Name": "${lower(avance2-marketplace)}-postgres"
+                },
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\database.tf"
+            },
+            {
+                "check_id": "CKV_AWS_23",
+                "bc_check_id": null,
+                "check_name": "Ensure every security group and rule has a description",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "description"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    1,
+                    9
+                ],
+                "resource": "module.marketplace.aws_security_group.app",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupRuleDescription",
+                "fixed_definition": null,
+                "entity_tags": {
+                    "Name": "${lower(avance2-marketplace)}-app-sg"
+                },
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_24",
+                "bc_check_id": null,
+                "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "from_port",
+                        "to_port",
+                        "cidr_ipv4",
+                        "cidr_ipv6"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    1,
+                    9
+                ],
+                "resource": "module.marketplace.aws_security_group.app",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress22",
+                "fixed_definition": null,
+                "entity_tags": {
+                    "Name": "${lower(avance2-marketplace)}-app-sg"
+                },
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_25",
+                "bc_check_id": null,
+                "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "from_port",
+                        "to_port",
+                        "cidr_ipv4",
+                        "cidr_ipv6"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    1,
+                    9
+                ],
+                "resource": "module.marketplace.aws_security_group.app",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress3389",
+                "fixed_definition": null,
+                "entity_tags": {
+                    "Name": "${lower(avance2-marketplace)}-app-sg"
+                },
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_23",
+                "bc_check_id": null,
+                "check_name": "Ensure every security group and rule has a description",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "description"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    11,
+                    18
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_ingress_rule.app_http",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupRuleDescription",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_24",
+                "bc_check_id": null,
+                "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "from_port",
+                        "to_port",
+                        "cidr_ipv4",
+                        "cidr_ipv6"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    11,
+                    18
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_ingress_rule.app_http",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress22",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_25",
+                "bc_check_id": null,
+                "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "from_port",
+                        "to_port",
+                        "cidr_ipv4",
+                        "cidr_ipv6"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    11,
+                    18
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_ingress_rule.app_http",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress3389",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_23",
+                "bc_check_id": null,
+                "check_name": "Ensure every security group and rule has a description",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "description"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    20,
+                    27
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_ingress_rule.app_https",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupRuleDescription",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_24",
+                "bc_check_id": null,
+                "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "from_port",
+                        "to_port",
+                        "cidr_ipv4",
+                        "cidr_ipv6"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    20,
+                    27
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_ingress_rule.app_https",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress22",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_25",
+                "bc_check_id": null,
+                "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "from_port",
+                        "to_port",
+                        "cidr_ipv4",
+                        "cidr_ipv6"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    20,
+                    27
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_ingress_rule.app_https",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress3389",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_23",
+                "bc_check_id": null,
+                "check_name": "Ensure every security group and rule has a description",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "description"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    29,
+                    34
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_egress_rule.app_all",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupRuleDescription",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_23",
+                "bc_check_id": null,
+                "check_name": "Ensure every security group and rule has a description",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "description"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    36,
+                    44
+                ],
+                "resource": "module.marketplace.aws_security_group.database",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupRuleDescription",
+                "fixed_definition": null,
+                "entity_tags": {
+                    "Name": "${lower(avance2-marketplace)}-db-sg"
+                },
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_24",
+                "bc_check_id": null,
+                "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "from_port",
+                        "to_port",
+                        "cidr_ipv4",
+                        "cidr_ipv6"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    36,
+                    44
+                ],
+                "resource": "module.marketplace.aws_security_group.database",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress22",
+                "fixed_definition": null,
+                "entity_tags": {
+                    "Name": "${lower(avance2-marketplace)}-db-sg"
+                },
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_25",
+                "bc_check_id": null,
+                "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "from_port",
+                        "to_port",
+                        "cidr_ipv4",
+                        "cidr_ipv6"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    36,
+                    44
+                ],
+                "resource": "module.marketplace.aws_security_group.database",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress3389",
+                "fixed_definition": null,
+                "entity_tags": {
+                    "Name": "${lower(avance2-marketplace)}-db-sg"
+                },
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_23",
+                "bc_check_id": null,
+                "check_name": "Ensure every security group and rule has a description",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "description"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    46,
+                    53
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_ingress_rule.database_from_app",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupRuleDescription",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_24",
+                "bc_check_id": null,
+                "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "from_port",
+                        "to_port",
+                        "cidr_ipv4",
+                        "cidr_ipv6"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    46,
+                    53
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_ingress_rule.database_from_app",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress22",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_25",
+                "bc_check_id": null,
+                "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "from_port",
+                        "to_port",
+                        "cidr_ipv4",
+                        "cidr_ipv6"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    46,
+                    53
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_ingress_rule.database_from_app",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress3389",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_23",
+                "bc_check_id": null,
+                "check_name": "Ensure every security group and rule has a description",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": [
+                        "description"
+                    ]
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\security.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf",
+                "repo_file_path": "/infra/terraform/security.tf",
+                "file_line_range": [
+                    55,
+                    60
+                ],
+                "resource": "module.marketplace.aws_vpc_security_group_egress_rule.database_all",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupRuleDescription",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\security.tf"
+            },
+            {
+                "check_id": "CKV_AWS_41",
+                "bc_check_id": null,
+                "check_name": "Ensure no hard coded AWS access key and secret key exists in provider",
+                "check_result": {
+                    "result": "PASSED",
+                    "evaluated_keys": []
+                },
+                "code_block": null,
+                "file_path": "\\terraform\\versions.tf",
+                "file_abs_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\versions.tf",
+                "repo_file_path": "/infra/terraform/versions.tf",
+                "file_line_range": [
+                    16,
+                    23
+                ],
+                "resource": "module.marketplace.aws.default",
+                "evaluations": null,
+                "check_class": "checkov.terraform.checks.provider.aws.credentials",
+                "fixed_definition": null,
+                "entity_tags": null,
+                "caller_file_path": "\\main.tf",
+                "caller_file_line_range": [
+                    3,
+                    5
+                ],
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": {},
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": null,
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "C:\\Users\\multi\\AppData\\Local\\Temp\\mercado-nube-red-d07rimjf\\infra\\terraform\\versions.tf"
+            }
+        ],
+        "failed_checks": [],
+        "skipped_checks": [],
+        "parsing_errors": []
+    },
+    "summary": {
+        "passed": 21,
+        "failed": 0,
+        "skipped": 0,
+        "parsing_errors": 0,
+        "resource_count": 36,
+        "checkov_version": "3.3.17"
+    },
+    "url": "Add an api key '--bc-api-key <api-key>' to see more detailed insights via https://bridgecrew.cloud"
+}

@@ -1,0 +1,7 @@
+*
+!requirements.txt
+!app/
+!app/**
+!deploy/
+!deploy/rds-ca-bundle.crt
+app/**/__pycache__

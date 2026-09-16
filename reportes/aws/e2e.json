@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-16T20:03:05.129Z",
+  "base": "https://100.24.2.141",
+  "orderURL": "https://100.24.2.141/pedidos/1",
+  "product": "Taza de autor 83154",
+  "registration": true,
+  "checkout": true,
+  "notification": true,
+  "s3_upload": true,
+  "health": {
+    "database": "ok",
+    "s3": "ok",
+    "service": "marketplace-api",
+    "status": "ok"
+  },
+  "browser_errors": []
+}

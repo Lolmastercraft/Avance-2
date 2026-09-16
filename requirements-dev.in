@@ -1,0 +1,7 @@
+# Entorno separado para herramientas (Checkov limita su propia versión de boto3).
+pytest==9.1.1
+requests==2.34.2
+bandit==1.9.4
+checkov==3.3.17
+pip-audit==2.10.1
+cyclonedx-bom==4.6.1

@@ -1,0 +1,5 @@
+"""Candidato de demostración: no desplegar."""
+import subprocess
+
+def legacy_search(query):
+    return subprocess.check_output("find /srv/catalog -name " + query, shell=True)

@@ -1,0 +1,7 @@
+aws_region            = "us-east-1"
+aws_profile           = "avance2-lab"
+project_name          = "avance2-marketplace"
+instance_type         = "t3.micro"
+db_instance_class     = "db.t3.micro"
+instance_profile_name = "LabInstanceProfile"
+

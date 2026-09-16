@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L8 3L0 6" fill="#17654f"/></marker></defs>
+<rect width="1400" height="850" fill="#f5f7f6"/>
+<g font-family="Arial" fill="#172e27">
+<text x="60" y="65" font-size="34" font-weight="bold">Mercado Nube · Arquitectura del marketplace</text>
+<text x="60" y="103" font-size="21">AWS us-east-1 · VPC 10.42.0.0/16 · entorno académico</text>
+<rect x="300" y="155" width="1040" height="600" rx="22" fill="#fff" stroke="#9bb3a8" stroke-width="2"/>
+<text x="328" y="190" font-size="23" font-weight="bold">VPC dedicada</text>
+<rect x="340" y="220" width="470" height="470" rx="16" fill="#e4f0e9"/>
+<text x="367" y="256" font-size="22" font-weight="bold">Subred pública · EC2 t3.micro</text>
+<text x="367" y="286" font-size="19">Docker Compose · EBS cifrado · IMDSv2</text>
+<rect x="385" y="315" width="380" height="72" rx="10" fill="#fff" stroke="#17654f"/>
+<text x="415" y="345" font-size="23">Proxy Nginx no privilegiado</text><text x="415" y="374" font-size="18">80 → HTTPS 443 · certificado de laboratorio</text>
+<rect x="385" y="430" width="380" height="86" rx="10" fill="#fff" stroke="#17654f"/>
+<text x="415" y="464" font-size="23" font-weight="bold">API Flask · contenedor propio</text><text x="415" y="494" font-size="19">Usuarios · catálogo · carrito · pedidos · /salud</text>
+<rect x="385" y="565" width="380" height="84" rx="10" fill="#fff" stroke="#17654f"/>
+<text x="411" y="599" font-size="23" font-weight="bold">Notificaciones · contenedor propio</text><text x="411" y="630" font-size="18">Consulta outbox · confirmación simulada · /salud</text>
+<rect x="895" y="225" width="395" height="175" rx="14" fill="#edf0fa" stroke="#536c9e"/>
+<text x="919" y="262" font-size="23" font-weight="bold">RDS PostgreSQL 16</text><text x="919" y="297" font-size="20">Subredes privadas en dos zonas</text><text x="919" y="328" font-size="20">Cifrado en reposo · conexión TLS</text><text x="919" y="359" font-size="20">SG permite 5432 solo desde SG EC2</text><text x="919" y="387" font-size="17">Usuarios, productos, carrito, pedidos y outbox</text>
+<rect x="895" y="468" width="395" height="155" rx="14" fill="#fff3db" stroke="#ae8540"/>
+<text x="919" y="505" font-size="23" font-weight="bold">Amazon S3 privado</text><text x="919" y="540" font-size="20">Bucket de productos · imágenes reales</text><text x="919" y="570" font-size="20">Bucket de evidencias · despliegues</text><text x="919" y="601" font-size="19">AES256 · TLS obligatorio · endpoint S3</text>
+<rect x="40" y="305" width="215" height="90" rx="12" fill="#fff" stroke="#17654f"/>
+<text x="65" y="343" font-size="23" font-weight="bold">Navegador</text><text x="65" y="374" font-size="19">HTTPS · sesión segura</text>
+<rect x="40" y="510" width="215" height="140" rx="12" fill="#fff" stroke="#17654f"/>
+<text x="65" y="550" font-size="23" font-weight="bold">Pipeline</text><text x="65" y="581" font-size="18">8 etapas · un veredicto</text><text x="65" y="612" font-size="18">Prueba HTTPS /salud</text><text x="65" y="638" font-size="17">Bloqueo ante cualquier fallo</text>
+<g fill="none" stroke="#17654f" stroke-width="3" marker-end="url(#a)"><path d="M255 350H382"/><path d="M575 387V427"/><path d="M765 454H852V325H891"/><path d="M765 607H870V368H891"/><path d="M765 483H835V545H891"/><path d="M255 575H310V370H382"/></g>
+<text x="825" y="435" font-size="18">TLS 5432</text><text x="850" y="681" font-size="18">S3 no reside en la VPC; acceso por endpoint gateway.</text>
+<text x="60" y="795" font-size="19">Administración por SSM sin SSH · secretos en SSM SecureString y .env fuera de Git · dos servicios propios sin puertos públicos</text>
+</g></svg>
