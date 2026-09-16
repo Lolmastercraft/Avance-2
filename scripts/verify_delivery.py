@@ -24,7 +24,7 @@ def main():
                 errors.append(f"Veredicto incorrecto: {label}")
         except (OSError, ValueError, KeyError):
             errors.append(f"Evidencia no verificable: {label}")
-    if not args.sin_video and "PENDIENTE" in (ROOT / "docs/enlace_video.txt").read_text(encoding="utf-8"):
+    if not args.sin_video and "pendiente" in (ROOT / "docs/enlace_video.txt").read_text(encoding="utf-8").lower():
         errors.append("El estudiante debe grabar y enlazar el video")
     print("\n".join(errors) if errors else "Archivos y veredictos presentes. Revisar acceso del evaluador y plantilla oficial antes de entregar.")
     return bool(errors)

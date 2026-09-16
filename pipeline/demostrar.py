@@ -15,7 +15,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--runtime-python", required=True)
     args = parser.parse_args()
-    runtime = str(Path(args.runtime_python).resolve())
+    # No resolver symlinks: en Linux bin/python apunta al intérprete base,
+    # pero la ruta dentro del venv determina qué paquetes enumera el SBOM.
+    runtime = os.path.abspath(args.runtime_python)
     env = dict(os.environ, PYTHONIOENCODING="utf-8", PYTHONUTF8="1")
     env.setdefault("GITLEAKS_BIN", str(ROOT / ".tools/gitleaks/gitleaks.exe") if os.name == "nt" else "gitleaks")
     unsafe = '"""Candidato de demostración: no desplegar."""\nimport subprocess\n\ndef legacy_search(query):\n    return subprocess.check_output("find /srv/catalog -name " + query, shell=True)\n'
