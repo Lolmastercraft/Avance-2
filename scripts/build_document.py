@@ -27,6 +27,10 @@ doc.styles['Title'].font.size = Pt(27)
 doc.styles['Heading 1'].font.size = Pt(20)
 doc.styles['Heading 2'].font.size = Pt(14)
 doc.styles['Caption'].font.size = Pt(9)
+# La plantilla base puede contener una línea temática bajo el título.
+for style in doc.styles:
+    for border in list(style.element.iter(qn('w:pBdr'))):
+        border.getparent().remove(border)
 doc.core_properties.title = 'Evidencias del marketplace Mercado Nube'
 doc.core_properties.author = 'Luis Alfonso Juárez Amaro'
 
@@ -80,7 +84,7 @@ def table(headers, rows, widths):
                 margins.append(item)
             props.append(margins)
             shade = OxmlElement('w:shd')
-            shade.set(qn('w:fill'), '24483C' if i == 0 else ('F1F4F2' if i % 2 else 'FFFFFF'))
+            shade.set(qn('w:fill'), '334155' if i == 0 else ('F1F4F7' if i % 2 else 'FFFFFF'))
             props.append(shade)
             for paragraph in cell.paragraphs:
                 paragraph.paragraph_format.space_after = Pt(2)
