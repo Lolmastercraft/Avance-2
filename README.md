@@ -1,6 +1,6 @@
 # Mercado Nube
 
-Marketplace individual del Avance 2 y la Entrega Final de LSCA2314. Backend Python con Flask, catálogo, publicación de productos, carrito y pedidos. La entrega final añade reenvío autorizado por SMTP a un buzón privado de pruebas.
+Marketplace individual de la Entrega Final de LSCA2314. Backend Python con Flask, catálogo, publicación de productos, carrito y pedidos. La entrega final añade reenvío autorizado por SMTP a un buzón privado de pruebas.
 
 **Entrega final:** [documento, clasificación, pipeline rojo/verde y Producción](docs/entrega_final.md). La instancia anterior es QA; la nueva instancia de Producción solo recibió el código corregido. Los reportes del Avance 2 se conservan como históricos.
 
