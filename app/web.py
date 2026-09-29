@@ -41,6 +41,8 @@ def create_app(config=None, storage=None):
     limiter = Limiter(get_remote_address, app=app, default_limits=["180 per minute"],
                       storage_uri="memory://", enabled=not app.config.get("TESTING"))
     app.extensions["market_limiter"] = limiter
+    from app.reenviar_confirmacion import reenviar_bp
+    app.register_blueprint(reenviar_bp)
     # Only the Compose proxy reaches this port; one trusted proxy hop.
     app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
 

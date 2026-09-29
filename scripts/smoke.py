@@ -1,12 +1,13 @@
 """Consulta /salud verificando el certificado TLS del laboratorio."""
 import argparse
 import json
+import os
 import ssl
 import urllib.request
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--url", default="https://100.24.2.141")
-parser.add_argument("--ca", default="deploy/lab-server.crt")
+parser.add_argument("--url", default=os.environ.get("MARKETPLACE_URL", "https://100.24.2.141"))
+parser.add_argument("--ca", default=os.environ.get("MARKETPLACE_CA", "deploy/lab-server.crt"))
 args = parser.parse_args()
 context = ssl.create_default_context(cafile=args.ca)
 with urllib.request.urlopen(args.url.rstrip("/") + "/salud", context=context, timeout=20) as response:

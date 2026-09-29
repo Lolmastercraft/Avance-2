@@ -24,10 +24,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--label", required=True, choices=["roja", "verde"])
     parser.add_argument("--runtime-python", default=sys.executable)
+    parser.add_argument("--report-root", default="reportes")
+    parser.add_argument("--report-name")
     args = parser.parse_args()
-    output = ROOT / "reportes" / args.label
+    report_root = ROOT / args.report_root
+    output = report_root / args.label
     output.mkdir(parents=True, exist_ok=True)
-    log_path = ROOT / "reportes" / f"corrida_{args.label}.txt"
+    log_path = report_root / (args.report_name or f"corrida_{args.label}.txt")
     stages = {}
     source_hash = hashlib.sha256()
     for path in sorted(set(source_files())):
@@ -82,7 +85,7 @@ def main():
                 ok = ok and sbom["bomFormat"] == "CycloneDX" and len(sbom["components"]) >= 20
                 write(f"SBOM: {sbom['bomFormat']} {sbom['specVersion']}, componentes: {len(sbom['components'])}")
                 if ok and args.label == "verde":
-                    (ROOT / "reportes/sbom_cyclonedx.json").write_text(json.dumps(sbom, indent=2), encoding="utf-8")
+                    (report_root / "sbom_cyclonedx.json").write_text(json.dumps(sbom, indent=2), encoding="utf-8")
             stages[name] = {"ok": bool(ok), "exit_code": result.returncode, "threshold": threshold}
         except Exception as error:
             stages[name] = {"ok": False, "error": type(error).__name__, "threshold": threshold}
