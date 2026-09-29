@@ -186,3 +186,51 @@ def test_sell_uploads_and_persists(app):
         product = db.scalar(select(Product).where(Product.name == "Nuevo producto"))
         assert product.price_cents == 12345
         assert product.image_key in app.extensions["storage"].images
+
+
+def resend_fixture(app):
+    owner, stranger = app.test_client(), app.test_client()
+    register(owner, "propietario@example.test")
+    order_url = purchase(owner).location
+    register(stranger, "otro@example.test")
+    messages = []
+    app.extensions["confirmation_sender"] = lambda **message: messages.append(message)
+    return owner, stranger, order_url + "/reenviar-confirmacion", messages
+
+
+def test_resend_owner_allowed_and_recipient_from_database(app):
+    owner, _, endpoint, messages = resend_fixture(app)
+    response = owner.post(endpoint, data={"csrf_token": token(owner, "/"), "destinatario": "ignorado@example.test"})
+    assert response.status_code == 200
+    assert len(messages) == 1
+    assert messages[0]["destinatario"] == "propietario@example.test"
+    assert "Producto de prueba" in messages[0]["detalle"]
+
+
+def test_resend_other_user_is_denied_without_sending(app):
+    _, stranger, endpoint, messages = resend_fixture(app)
+    response = stranger.post(endpoint, data={"csrf_token": token(stranger, "/")})
+    print(f"CWE-639: usuario ajeno; HTTP={response.status_code}; correos={len(messages)}")
+    assert response.status_code == 404, "Un usuario ajeno no debe reenviar la confirmacion del propietario"
+    assert messages == [], "El rechazo debe ocurrir antes del envio SMTP"
+
+
+def test_resend_anonymous_is_denied_without_sending(app):
+    _, _, endpoint, messages = resend_fixture(app)
+    anonymous = app.test_client()
+    response = anonymous.post(endpoint, data={"csrf_token": token(anonymous)})
+    print(f"CWE-862: sin autenticar con CSRF valido; HTTP={response.status_code}; correos={len(messages)}")
+    assert response.status_code == 401, "CSRF no sustituye autenticacion ni autorizacion"
+    assert messages == []
+
+
+def test_resend_csrf_required(app):
+    owner, _, endpoint, messages = resend_fixture(app)
+    assert owner.post(endpoint).status_code == 400
+    assert messages == []
+
+
+def test_resend_missing_order(app):
+    owner, _, _, messages = resend_fixture(app)
+    assert owner.post("/pedidos/999999/reenviar-confirmacion", data={"csrf_token": token(owner, "/")}).status_code == 404
+    assert messages == []
