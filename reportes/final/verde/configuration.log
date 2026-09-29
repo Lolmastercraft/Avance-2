@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "docker_base_version_fixed": true,
+    "docker_nonroot": true,
+    "docker_healthcheck": true,
+    "docker_hash_locked_dependencies": true,
+    "two_own_services": true,
+    "private_notifications": true,
+    "api_behind_tls_proxy": true,
+    "no_privileged_containers": true,
+    "runtime_readonly": true,
+    "runtime_drop_caps": true,
+    "s3_four_public_blocks": true,
+    "s3_encryption": true,
+    "s3_tls_policy": true,
+    "rds_private": true,
+    "rds_encrypted": true,
+    "rds_only_app_sg": true
+  },
+  "failed": []
+}

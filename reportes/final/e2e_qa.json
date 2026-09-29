@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-29T06:24:28.623873+00:00",
+  "environment": "qa",
+  "url": "https://3.93.143.140",
+  "tls_verified": true,
+  "order_path": "/pedidos/7",
+  "owner_resend": 200,
+  "other_user": 404,
+  "anonymous": 401,
+  "missing_csrf": 400,
+  "owner_response": {
+    "mensaje": "Confirmacion reenviada para el pedido 7"
+  },
+  "email_delivery": "SMTP privado Mailpit; no correo externo"
+}

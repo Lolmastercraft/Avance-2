@@ -1,0 +1,10 @@
+{
+  "environment": "production",
+  "instance_id": "i-02be4a02d659f23c3",
+  "remediation_commit": "b0b127b",
+  "deployment_sha256": "cc80c78c97b8446838e315735adde02d891b182abffe8b02c75ab32d20ce84c6",
+  "qa_gate_utc": "2026-09-29T06:12:53.103983+00:00",
+  "command_id": "f12368a8-2c7c-4254-b526-1a298e23d4db",
+  "artifact_sha256": "e37acee37029ba6974603f3572165f3d119efa4860dbc06b9e33440ba7af299e",
+  "artifact_key": "final/releases/production-e37acee37029ba69.tgz"
+}

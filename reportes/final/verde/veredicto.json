@@ -1,0 +1,48 @@
+{
+  "verdict": "PERMITIR",
+  "source_sha256": "1523e67a9c6c35976d26a2d739f6389674dde3a1e429c692122cc861d676ac54",
+  "deployment_sha256": "cc80c78c97b8446838e315735adde02d891b182abffe8b02c75ab32d20ce84c6",
+  "stages": {
+    "secrets": {
+      "ok": true,
+      "exit_code": 0,
+      "threshold": "Cero credenciales reconocidas en código/configuración"
+    },
+    "bandit": {
+      "ok": true,
+      "exit_code": 0,
+      "threshold": "Cero MEDIUM/HIGH; LOW se registra"
+    },
+    "checkov": {
+      "ok": true,
+      "exit_code": 0,
+      "threshold": "Cero fallos en los siete controles seleccionados; cero errores de parseo"
+    },
+    "configuration": {
+      "ok": true,
+      "exit_code": 0,
+      "threshold": "Todos los controles Docker/S3/RDS obligatorios"
+    },
+    "dependencies": {
+      "ok": true,
+      "exit_code": 0,
+      "threshold": "Cero vulnerabilidades publicadas en dependencias de producción"
+    },
+    "tests": {
+      "ok": true,
+      "exit_code": 0,
+      "threshold": "Cero pruebas fallidas; todas las pruebas deben ejecutarse"
+    },
+    "sbom": {
+      "ok": true,
+      "exit_code": 0,
+      "threshold": "CycloneDX válido con componentes de ejecución"
+    },
+    "live": {
+      "ok": true,
+      "exit_code": 0,
+      "threshold": "HTTP 200; API, RDS y S3 sanos; certificado TLS verificado"
+    }
+  },
+  "utc": "2026-09-29T06:12:53.103983+00:00"
+}

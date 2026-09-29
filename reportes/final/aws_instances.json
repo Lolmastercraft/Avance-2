@@ -1,0 +1,70 @@
+{
+  "utc": "2026-09-29T06:25:04.636872+00:00",
+  "region": "us-east-1",
+  "instances": [
+    {
+      "InstanceId": "i-06f5d7a26aa4f1498",
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "PublicIpAddress": "3.93.143.140",
+      "PrivateIpAddress": "10.42.10.102",
+      "InstanceType": "t3.micro",
+      "LaunchTime": "2026-09-29 05:48:24+00:00",
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "Terraform"
+        },
+        {
+          "Key": "Environment",
+          "Value": "LearnerLab"
+        },
+        {
+          "Key": "Project",
+          "Value": "Avance 2 Marketplace"
+        },
+        {
+          "Key": "Name",
+          "Value": "avance2-marketplace-app"
+        },
+        {
+          "Key": "Owner",
+          "Value": "student"
+        }
+      ],
+      "VpcId": "vpc-09bf9d8984b710e22",
+      "SubnetId": "subnet-08e0413e8b2fe2b93",
+      "environment": "qa"
+    },
+    {
+      "InstanceId": "i-02be4a02d659f23c3",
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "PublicIpAddress": "52.87.249.158",
+      "PrivateIpAddress": "10.42.10.193",
+      "InstanceType": "t3.micro",
+      "LaunchTime": "2026-09-29 06:14:28+00:00",
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "LSCA2314-EntregaFinal"
+        },
+        {
+          "Key": "Name",
+          "Value": "entrega-final-marketplace-production"
+        },
+        {
+          "Key": "Environment",
+          "Value": "production-academic"
+        }
+      ],
+      "VpcId": "vpc-09bf9d8984b710e22",
+      "SubnetId": "subnet-08e0413e8b2fe2b93",
+      "environment": "production"
+    }
+  ]
+}

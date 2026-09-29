@@ -1,0 +1,39 @@
+..............FF....                                                     [100%]
+=================================== FAILURES ===================================
+_______________ test_resend_other_user_is_denied_without_sending _______________
+
+app = <Flask 'app.web'>
+
+    def test_resend_other_user_is_denied_without_sending(app):
+        _, stranger, endpoint, messages = resend_fixture(app)
+        response = stranger.post(endpoint, data={"csrf_token": token(stranger, "/")})
+        print(f"CWE-639: usuario ajeno; HTTP={response.status_code}; correos={len(messages)}")
+>       assert response.status_code == 404, "Un usuario ajeno no debe reenviar la confirmacion del propietario"
+E       AssertionError: Un usuario ajeno no debe reenviar la confirmacion del propietario
+E       assert 200 == 404
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+
+tests/test_marketplace.py:214: AssertionError
+----------------------------- Captured stdout call -----------------------------
+CWE-639: usuario ajeno; HTTP=200; correos=1
+_______________ test_resend_anonymous_is_denied_without_sending ________________
+
+app = <Flask 'app.web'>
+
+    def test_resend_anonymous_is_denied_without_sending(app):
+        _, _, endpoint, messages = resend_fixture(app)
+        anonymous = app.test_client()
+        response = anonymous.post(endpoint, data={"csrf_token": token(anonymous)})
+        print(f"CWE-862: sin autenticar con CSRF valido; HTTP={response.status_code}; correos={len(messages)}")
+>       assert response.status_code == 401, "CSRF no sustituye autenticacion ni autorizacion"
+E       AssertionError: CSRF no sustituye autenticacion ni autorizacion
+E       assert 200 == 401
+E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
+
+tests/test_marketplace.py:223: AssertionError
+----------------------------- Captured stdout call -----------------------------
+CWE-862: sin autenticar con CSRF valido; HTTP=200; correos=1
+=========================== short test summary info ============================
+FAILED tests/test_marketplace.py::test_resend_other_user_is_denied_without_sending
+FAILED tests/test_marketplace.py::test_resend_anonymous_is_denied_without_sending
+2 failed, 18 passed in 5.26s

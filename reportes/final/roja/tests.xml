@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="20" time="5.262" timestamp="2026-09-29T06:06:12.558934+00:00" hostname="ip-10-42-10-102.ec2.internal"><testcase classname="tests.test_marketplace" name="test_health_and_headers" time="0.117" /><testcase classname="tests.test_marketplace" name="test_health_fails_closed" time="0.054" /><testcase classname="tests.test_marketplace" name="test_csrf_blocks_forgery" time="0.059" /><testcase classname="tests.test_marketplace" name="test_authentication_and_password_hash" time="0.310" /><testcase classname="tests.test_marketplace" name="test_wrong_password_rejected" time="0.308" /><testcase classname="tests.test_marketplace" name="test_checkout_uses_server_price_and_outbox" time="0.259" /><testcase classname="tests.test_marketplace" name="test_order_isolation" time="0.407" /><testcase classname="tests.test_marketplace" name="test_stock_limit" time="0.219" /><testcase classname="tests.test_marketplace" name="test_checkout_transaction_rolls_back" time="0.225" /><testcase classname="tests.test_marketplace" name="test_sql_injection_is_data" time="0.067" /><testcase classname="tests.test_marketplace" name="test_xss_escaped" time="0.070" /><testcase classname="tests.test_marketplace" name="test_images_validate_content" time="0.161" /><testcase classname="tests.test_marketplace" name="test_sell_uploads_and_persists" time="0.194" /><testcase classname="tests.test_marketplace" name="test_resend_owner_allowed_and_recipient_from_database" time="0.355" /><testcase classname="tests.test_marketplace" name="test_resend_other_user_is_denied_without_sending" time="0.356"><failure message="AssertionError: Un usuario ajeno no debe reenviar la confirmacion del propietario&#10;assert 200 == 404&#10; +  where 200 = &lt;WrapperTestResponse streamed [200 OK]&gt;.status_code">app = &lt;Flask 'app.web'&gt;
+
+    def test_resend_other_user_is_denied_without_sending(app):
+        _, stranger, endpoint, messages = resend_fixture(app)
+        response = stranger.post(endpoint, data={"csrf_token": token(stranger, "/")})
+        print(f"CWE-639: usuario ajeno; HTTP={response.status_code}; correos={len(messages)}")
+&gt;       assert response.status_code == 404, "Un usuario ajeno no debe reenviar la confirmacion del propietario"
+E       AssertionError: Un usuario ajeno no debe reenviar la confirmacion del propietario
+E       assert 200 == 404
+E        +  where 200 = &lt;WrapperTestResponse streamed [200 OK]&gt;.status_code
+
+tests/test_marketplace.py:214: AssertionError</failure></testcase><testcase classname="tests.test_marketplace" name="test_resend_anonymous_is_denied_without_sending" time="0.347"><failure message="AssertionError: CSRF no sustituye autenticacion ni autorizacion&#10;assert 200 == 401&#10; +  where 200 = &lt;WrapperTestResponse streamed [200 OK]&gt;.status_code">app = &lt;Flask 'app.web'&gt;
+
+    def test_resend_anonymous_is_denied_without_sending(app):
+        _, _, endpoint, messages = resend_fixture(app)
+        anonymous = app.test_client()
+        response = anonymous.post(endpoint, data={"csrf_token": token(anonymous)})
+        print(f"CWE-862: sin autenticar con CSRF valido; HTTP={response.status_code}; correos={len(messages)}")
+&gt;       assert response.status_code == 401, "CSRF no sustituye autenticacion ni autorizacion"
+E       AssertionError: CSRF no sustituye autenticacion ni autorizacion
+E       assert 200 == 401
+E        +  where 200 = &lt;WrapperTestResponse streamed [200 OK]&gt;.status_code
+
+tests/test_marketplace.py:223: AssertionError</failure></testcase><testcase classname="tests.test_marketplace" name="test_resend_csrf_required" time="0.348" /><testcase classname="tests.test_marketplace" name="test_resend_missing_order" time="0.352" /><testcase classname="tests.test_pipeline" name="test_final_gate_requires_all_stages" time="0.000" /><testcase classname="tests.test_pipeline" name="test_final_gate_rejects_failures_and_unknowns" time="0.000" /></testsuite></testsuites>

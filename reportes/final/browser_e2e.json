@@ -1,0 +1,7 @@
+{
+  "utc": "2026-09-29T06:24:34.577Z",
+  "url": "https://52.87.249.158/pedidos/1",
+  "button_clicked": true,
+  "response": "{\"mensaje\":\"Confirmacion reenviada para el pedido 1\"}\n",
+  "tls_note": "Captura de prueba con certificado autofirmado; verificacion TLS independiente en e2e_production.json"
+}

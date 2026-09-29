@@ -1,10 +1,12 @@
 # Mercado Nube
 
-Marketplace individual del Avance 2 de LSCA2314. Backend Python con Flask, catálogo, publicación de productos, carrito, pedidos y notificaciones simuladas en un contenedor independiente.
+Marketplace individual del Avance 2 y la Entrega Final de LSCA2314. Backend Python con Flask, catálogo, publicación de productos, carrito y pedidos. La entrega final añade reenvío autorizado por SMTP a un buzón privado de pruebas.
+
+**Entrega final:** [documento, clasificación, pipeline rojo/verde y Producción](docs/entrega_final.md). La instancia anterior es QA; la nueva instancia de Producción solo recibió el código corregido. Los reportes del Avance 2 se conservan como históricos.
 
 - **Repositorio:** https://github.com/Lolmastercraft/Avance-2
-- **Aplicación del laboratorio:** https://100.24.2.141
-- **Salud:** https://100.24.2.141/salud
+- **Aplicación QA del laboratorio:** https://3.93.143.140
+- **Salud QA:** https://3.93.143.140/salud
 - **Guía completa:** [docs/README.md](docs/README.md)
 - **Documento de evidencias:** [entrega/Evidencias_Avance2_Mercado_Nube.docx](entrega/Evidencias_Avance2_Mercado_Nube.docx)
 - **Arquitectura:** [diagrama](docs/diagrama_arquitectura.png)
