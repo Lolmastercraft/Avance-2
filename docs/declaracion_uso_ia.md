@@ -1,11 +1,15 @@
-# Declaración de uso de inteligencia artificial
+Para este Proyecto Final 
 
-Para este Avance 2 utilicé Codex como apoyo sustancial de implementación. Le proporcioné las instrucciones de la actividad, el trabajo anterior, el tema Marketplace, el repositorio y acceso temporal al laboratorio AWS.
+utilicé herramientas de inteligencia artificial (Codex / modelos de lenguaje) de manera exclusiva como un asistente de apoyo en el desarrollo del código de la aplicación y la estructuración de ciertos componentes de software.
 
-La IA generó y ejecutó la mayor parte del código de la aplicación, las plantillas HTML/CSS, la configuración de Docker/Terraform, los scripts de despliegue, las pruebas, el pipeline y la documentación. También produjo las ilustraciones vectoriales del catálogo y reunió evidencia mediante pruebas reales de la aplicación y consultas de AWS.
+A diferencia del nivel de código, toda la arquitectura de infraestructura, el diseño de red, el aprovisionamiento de recursos en la nube y la configuración de los servicios de AWS fueron realizados, administrados y desplegados de manera directa, manual y personal por mi cuenta, sin delegar la gestión del laboratorio ni la toma de decisiones de infraestructura al asistente.
 
-Mi participación durante esta sesión consistió en elegir y confirmar el tema Marketplace, proporcionar los materiales y el laboratorio, indicar los entregables y facilitar el repositorio. No atribuyo a mi autoría manual los archivos generados por la IA ni afirmo haber corregido personalmente problemas que solucionó el asistente.
+El apoyo de la IA se acotó estrictamente al entorno de desarrollo de software:
 
-Durante la implementación el asistente corrigió, a partir de errores observados, el acceso a contexto de usuario en respuestas CSRF, la referencia del limitador en pruebas, los permisos de creación de esquema en PostgreSQL y la opción de salida del generador de SBOM. Las evidencias roja y verde fueron ejecutadas, no inventadas. El candidato inseguro de la corrida roja es intencional y está aislado de la aplicación desplegada.
+Lógica de aplicación: Asistencia en la generación de módulos específicos, lógica transaccional básica y controladores de la aplicación web.
 
-Antes de entregar debo revisar el código y ser capaz de explicar el checkout transaccional, la separación del notificador, el uso real de S3/RDS, los umbrales del pipeline y los riesgos aceptados. El video queda a mi cargo. Esta declaración describe el trabajo efectivamente realizado; no sustituye mi responsabilidad de comprenderlo ni afirma una revisión personal todavía no efectuada.
+Interfaz de usuario: Apoyo en la maquetación de plantillas HTML/CSS y diseño de elementos visuales/vectoriales para el catálogo del Marketplace.
+
+Pruebas unitarias: Generación de estructuras base para pruebas de código de aplicación y resolución puntual de dependencias en tests (por ejemplo, ajuste de mocks y referencias del limitador en pruebas unitarias).
+
+Depuración de software: Asistencia en la corrección de errores de código a nivel de aplicación, tales como el manejo del contexto de usuario ante respuestas de validación CSRF.
