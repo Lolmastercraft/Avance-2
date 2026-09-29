@@ -28,6 +28,7 @@ def create_app(config=None, storage=None):
         SESSION_COOKIE_HTTPONLY=True, SESSION_COOKIE_SAMESITE="Lax",
         SESSION_COOKIE_SECURE=os.environ.get("COOKIE_SECURE", "true").lower() == "true",
         PERMANENT_SESSION_LIFETIME=timedelta(hours=2), WTF_CSRF_TIME_LIMIT=3600,
+        RESEND_ENABLED=os.environ.get("RESEND_ENABLED", "true").lower() == "true",
     )
     if config:
         app.config.update(config)
@@ -39,10 +40,13 @@ def create_app(config=None, storage=None):
     app.extensions["storage"] = storage or Storage()
     CSRFProtect(app)
     limiter = Limiter(get_remote_address, app=app, default_limits=["180 per minute"],
-                      storage_uri="memory://", enabled=not app.config.get("TESTING"))
+                      storage_uri="memory://", enabled=not app.config.get("TESTING") or app.config.get("TEST_RATE_LIMITS", False))
     app.extensions["market_limiter"] = limiter
     from app.reenviar_confirmacion import reenviar_bp
     app.register_blueprint(reenviar_bp)
+    app.view_functions["reenviar.reenviar_confirmacion"] = limiter.limit(
+        "3 per minute", key_func=lambda: str(g.user.id) if g.get("user") else get_remote_address()
+    )(app.view_functions["reenviar.reenviar_confirmacion"])
     # Only the Compose proxy reaches this port; one trusted proxy hop.
     app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
 

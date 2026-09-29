@@ -1,0 +1,6 @@
+<section class="panel">
+<h2>Reenviar confirmación</h2>
+<p>El reenvío utiliza SMTP hacia un buzón privado de pruebas. No se envía correo externo.</p>
+<form method="post" action="{{ url_for('reenviar.reenviar_confirmacion', pedido_id=order.id) }}"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="button" type="submit">Reenviar confirmación</button></form>
+<p class="muted">Solo el propietario del pedido puede reenviarla. Máximo tres solicitudes por minuto.</p>
+</section>

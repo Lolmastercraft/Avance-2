@@ -5,9 +5,9 @@ from sqlalchemy import select
 from app.models import Order, OrderItem, User
 
 
-def obtener_pedido_por_id(pedido_id):
+def obtener_pedido_por_id(pedido_id, *, user_id):
     with current_app.extensions["db_factory"]() as db:
-        pedido = db.get(Order, pedido_id)
+        pedido = db.scalar(select(Order).where(Order.id == pedido_id, Order.user_id == user_id))
         if pedido is None:
             return None
         comprador = db.get(User, pedido.user_id)

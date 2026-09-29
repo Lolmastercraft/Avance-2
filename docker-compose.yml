@@ -22,6 +22,7 @@ services:
       PRODUCT_BUCKET: ${PRODUCT_BUCKET:?Configura PRODUCT_BUCKET}
       AWS_REGION: ${AWS_REGION:-us-east-1}
       COOKIE_SECURE: "true"
+      RESEND_ENABLED: ${RESEND_ENABLED:-true}
     networks: [frontend, backend]
   notifications:
     <<: *runtime
@@ -32,6 +33,16 @@ services:
     command: [gunicorn, --bind, "0.0.0.0:8000", --workers, "1", --threads, "2", --worker-tmp-dir, /tmp, "app.notifications:create_worker()"]
     depends_on:
       api: {condition: service_healthy}
+    networks: [backend]
+  mailpit:
+    <<: *runtime
+    image: axllent/mailpit:v1.31.3
+    user: "10001:10001"
+    mem_limit: 96m
+    environment:
+      MP_DATABASE: /tmp/mailpit.db
+      MP_MAX_MESSAGES: "100"
+      MP_DISABLE_VERSION_CHECK: "true"
     networks: [backend]
   proxy:
     <<: *runtime

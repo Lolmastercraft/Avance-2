@@ -234,3 +234,30 @@ def test_resend_missing_order(app):
     owner, _, _, messages = resend_fixture(app)
     assert owner.post("/pedidos/999999/reenviar-confirmacion", data={"csrf_token": token(owner, "/")}).status_code == 404
     assert messages == []
+
+
+def test_resend_containment_flag_blocks_all_delivery(app):
+    owner, _, endpoint, messages = resend_fixture(app)
+    app.config["RESEND_ENABLED"] = False
+    assert owner.post(endpoint, data={"csrf_token": token(owner, "/")}).status_code == 503
+    assert messages == []
+
+
+def test_resend_smtp_failure_is_not_false_success(app):
+    import smtplib
+    owner, _, endpoint, _ = resend_fixture(app)
+    def unavailable(**kwargs):
+        raise smtplib.SMTPException("internal detail must not leak")
+    app.extensions["confirmation_sender"] = unavailable
+    response = owner.post(endpoint, data={"csrf_token": token(owner, "/")})
+    assert response.status_code == 503
+    assert "internal detail" not in response.text
+
+
+def test_resend_rate_limit(app):
+    app = create_app(dict(app.config, TEST_RATE_LIMITS=True, RATELIMIT_ENABLED=True), MemoryStorage())
+    owner, _, endpoint, messages = resend_fixture(app)
+    csrf = token(owner, "/")
+    codes = [owner.post(endpoint, data={"csrf_token": csrf}).status_code for _ in range(4)]
+    assert codes == [200, 200, 200, 429]
+    assert len(messages) == 3
