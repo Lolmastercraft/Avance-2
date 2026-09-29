@@ -35,8 +35,8 @@ Los reportes `estado_qa.txt` y `estado_production.txt` incluyen las cuatro insta
 - `docs/capturas/final/01_pipeline_bloqueado.png` y `04_pipeline_verde.png`: captura del visor compacto de los registros reales; aparecen las ocho etapas y el veredicto. Los archivos completos están en `reportes/pipeline_bloqueado.txt` y `reportes/pipeline_verde.txt`.
 - `02_hallazgo.png`: salida de pytest de la corrida roja de QA.
 - `03_diff_remediacion.png`: salida real de Git del cambio de autorización.
-- `05_qa_identidad.png`: vista de los datos originales de DescribeInstances y SSM, identificada como exportación, no como consola AWS.
-- `06_ec2_produccion_consola.png`: captura original de la consola EC2 proporcionada por el alumno; muestra la instancia nueva y su IP mientras se inicializaba.
+- `05_qa_consola.png`: captura de la consola EC2 aportada por el alumno; muestra el ID de la misma instancia QA del Avance 2, su estado y su IP. Sustituye en el Word al visor `05_qa_identidad.png`, que se conserva como evidencia complementaria.
+- `06_ec2_produccion_consola.png`: captura ampliada de la consola EC2 proporcionada por el alumno; muestra la instancia nueva seleccionada y su resumen con ID, estado e IP.
 - `07_app_produccion.png` y `08_reenvio_produccion.png`: capturas de la aplicación real y su respuesta de reenvío.
 
 ## Límites del laboratorio
